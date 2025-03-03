@@ -1,7 +1,10 @@
 // Register service worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
+    // Get the base path from the current location to handle GitHub Pages deployment
+    const basePath = window.location.pathname.replace(/\/[^\/]*$/, '');
+    
+    navigator.serviceWorker.register(`${basePath}/service-worker.js`)
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);
       })

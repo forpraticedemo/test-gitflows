@@ -1,11 +1,16 @@
 // service-worker.js
 const CACHE_NAME = 'pwa-cache-v1';
+
+// Get the base path for GitHub Pages deployment
+const basePath = self.location.pathname.replace('service-worker.js', '');
+
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png'
+  basePath,
+  `${basePath}index.html`,
+  `${basePath}manifest.json`,
+  `${basePath}css/style.css`,
+  `${basePath}js/main.js`,
+  `${basePath}icons/icon-192x192.png`
 ];
 
 // Install event - cache assets
@@ -84,7 +89,7 @@ self.addEventListener('notificationclick', event => {
       }
       // 如果沒有開啟的窗口，則打開一個新的
       if (clients.openWindow) {
-        return clients.openWindow('/');
+        return clients.openWindow(basePath || './');
       }
     })
   );
