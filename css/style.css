@@ -1,0 +1,88 @@
+/* 基本響應式設計和手機優化 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  padding: 15px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* 按鈕樣式優化 */
+.button {
+  display: block;
+  width: 100%;
+  background-color: #4285f4;
+  color: white;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.button:active {
+  background-color: #3367d6;
+  transform: scale(0.98);
+}
+
+/* 安裝指導樣式 */
+.install-instructions {
+  display: none;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platform-specific {
+  display: none;
+}
+
+.platform-specific ol {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.platform-specific li {
+  margin-bottom: 10px;
+}
+
+/* 媒體查詢 - 平板和桌面 */
+@media screen and (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+    padding: 12px 25px;
+  }
+}
