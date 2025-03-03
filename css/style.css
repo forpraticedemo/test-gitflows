@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.install-instructions {
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.platform-specific {
+  display: none;
+}
